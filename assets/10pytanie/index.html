@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../style.css" rel="stylesheet">
+        <meta charset="utf8">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+            $( "#media" ).draggable();
+        } );
+        </script>
+    </head>
+    <body>
+        <div id="media" style=" width: 400px ;height: 215px;">
+            <img id="snorlax" src="photo.png"></img>
+            <div id="close" onclick="pozdro()">×</div>
+        </div>
+        <img id="zdjecie" src="1.png">
+        <div id="container">
+            <div id="question">
+                <div id="question_text" onclick="test()">
+                    10. Co to za pokemon?
+                </div>
+            </div>
+            <div class="container_answer" id="hide">
+                <div id="win">WYGRAŁEŚ: 60zł</div>
+            </div>
+            <div class="container_answer" id="odpowiedzi">
+                <div class="answer" id="a1" onclick="good('a1')">
+                    <div class="answertext"><span class="answerkey">A:</span> Snorlax</div>
+                </div>
+                <div class="answer" id="a2" onclick="bad('a1', 'a2')">
+                    <div class="answertext"><span class="answerkey">B:</span> Snorlaks</div>
+                </div>
+                <div class="answer" id="a3" onclick="bad('a1', 'a3')">
+                    <div class="answertext"><span class="answerkey">C:</span> Darkai</div>
+                </div>
+                <div class="answer" id="a4" onclick="bad('a1', 'a4')">
+                    <div class="answertext"><span class="answerkey">D:</span> Patiro</div>
+                </div>
+            </div>
+        </div>
+        <a href="../11pytanie/index.html" id="next">
+            >
+        </a>
+        <script>
+            var kolo = 'a1';
+            var numerPytania = "10"
+        </script>
+        <script src="../main.js"></script>
+    </body>
+</html>

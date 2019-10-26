@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../style.css" rel="stylesheet">
+        <meta charset="utf8">
+    </head>
+    <body>
+        <img id="zdjecie" src="1.png">
+        <div id="container">
+            <div id="question">
+                <div id="question_text" onclick="test()">
+                    3. Na jakiej ulicy mieszka Pajalock?
+                </div>
+            </div>
+            <div class="container_answer" id="hide">
+                <div id="win">WYGRAŁEŚ: 10zł</div>
+            </div>
+            <div class="container_answer" id="odpowiedzi">
+                <div class="answer" id="a1" onclick="good('a1')">
+                    <div class="answertext"><span class="answerkey">A:</span> Nadwiślańska</div>
+                </div>
+                <div class="answer" id="a2" onclick="bad('a1', 'a2')">
+                    <div class="answertext"><span class="answerkey">B:</span> Above The Vistula</div>
+                </div>
+                <div class="answer" id="a3" onclick="bad('a1', 'a3')">
+                    <div class="answertext"><span class="answerkey">C:</span> Zabłocie</div>
+                </div>
+                <div class="answer" id="a4" onclick="bad('a1', 'a4')">
+                    <div class="answertext"><span class="answerkey">D:</span> Mączna</div>
+                </div>
+            </div>
+        </div>
+        <a href="../4pytanie/index.html" id="next">
+            >
+        </a>
+        <script>
+            var kolo = 'a1';
+            var numerPytania = "3"
+        </script>
+        <script src="../main.js"></script>
+    </body>
+</html>

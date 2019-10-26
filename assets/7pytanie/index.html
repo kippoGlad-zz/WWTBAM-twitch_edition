@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../style.css" rel="stylesheet">
+        <meta charset="utf8">
+    </head>
+    <body>
+        <img id="zdjecie" src="1.png">
+        <div id="container">
+            <div id="question">
+                <div id="question_text" onclick="test()">
+                    7. Wybierz  prawidłowy skład team skała.
+                </div>
+            </div>
+            <div class="container_answer" id="hide">
+                <div id="win">WYGRAŁEŚ: 30zł</div>
+            </div>
+            <div class="container_answer" id="odpowiedzi" style="font-size: 85% !important;">
+                <div class="answer" id="a1" onclick="bad('a3', 'a1')">
+                    <div class="answertext"><span class="answerkey">A:</span> NZQ, Overpow, Delord, Gucio, Kubon</div>
+                </div>
+                <div class="answer" id="a2" onclick="bad('a3', 'a2')">
+                    <div class="answertext"><span class="answerkey">B:</span> Overpow, Arquel, Nervarien, Delord, Kubon</div>
+                </div>
+                <div class="answer" id="a3" onclick="good('a3')">
+                    <div class="answertext"><span class="answerkey">C:</span> Arquel, Delord, Gucio, Nzq, Overpow</div>
+                </div>
+                <div class="answer" id="a4" onclick="bad('a3', 'a4')">
+                    <div class="answertext"><span class="answerkey">D:</span> Gucio, Demonz, Overpow, Nzq, Arquel</div>
+                </div>
+            </div>
+        </div>
+        <a href="../8pytanie/index.html" id="next">
+            >
+        </a>
+        <script>
+            var kolo = 'a3';
+            var numerPytania = "7"
+        </script>
+        <script src="../main.js"></script>
+    </body>
+</html>
