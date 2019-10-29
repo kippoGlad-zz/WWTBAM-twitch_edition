@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://gist.githubusercontent.com/AndrewBarba/2c0f6612ceef30f5f55d/raw/417d3f544c46615502da8b56e2866c6caeb5054b/sanfrancisco-font.css" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-        <script src="pytania.js"></script>
-    </head>
-    <body>
-        <div class="OBS_page">
-            <div class="game">
-                <div class="question">
-                    <p>Pytanie</p>
+
+<head>
+    <link
+        href="https://gist.githubusercontent.com/AndrewBarba/2c0f6612ceef30f5f55d/raw/417d3f544c46615502da8b56e2866c6caeb5054b/sanfrancisco-font.css"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="pytania.js"></script>
+</head>
+
+<body>
+    <div class="OBS_page">
+        <div class="game">
+
+            <div class="awards">
+                <div class="kola-ratunkowe2">
+                    <img src="#" alt="publicznosc">
+                    <img src="#" alt="50:50">
+                    <img src="#" alt="pytanie do prowadzacego">
                 </div>
-                <div class="anwsers">
-                    <div class="anwser" id="a1"></div>
-                    <div class="anwser" id="a2"></div>
-                    <div class="anwser" id="a3">20</div>
-                    <div class="anwser" id="a4">50</div>
+                <div class="awards-container">
+                    <div class="award"><span class="award-counter">11</span><span class="award-money">100 zł</span>
+                    </div>
+                    <div class="award"><span class="award-counter">10</span><span class="award-money">90 zł</span></div>
+                    <div class="award"><span class="award-counter">9</span><span class="award-money">80 zł</span></div>
+                    <div class="award"><span class="award-counter">8</span><span class="award-money">70 zł</span></div>
+                    <div class="award prog"><span class="award-counter">7</span><span class="award-money">70 zł</span></div>
+                    <div class="award"><span class="award-counter">6</span><span class="award-money">60 zł</span></div>
+                    <div class="award"><span class="award-counter">5</span><span class="award-money">50 zł</span></div>
+                    <div class="award prog"><span class="award-counter">4</span><span class="award-money">40 zł</span></div>
+                    <div class="award"><span class="award-counter">3</span><span class="award-money">30 zł</span></div>
+                    <div class="award prog"><span class="award-counter">2</span><span class="award-money">20 zł</span></div>
+                    <div class="award"><span class="award-counter">1</span><span class="award-money">10 zł</span></div>
                 </div>
-            </div>
-        </div>
-        <div class="control_page">
-            <div class="next longButton">
-                Następne pytanie > <br>(odblokuje sie po odpowiedzi)
             </div>
 
-            <div class="longButton" onclick="showNext()">
-                Pokaz pytanie/odpowiedzi
+            <div class="question">
+                <p>Pytanie</p>
             </div>
-            <div class="longButton" onclick="hideAll()">
-                Schowaj wszystkie pytania i odpowiedzi
+            <div class="anwsers">
+                <div class="anwser" id="a1"></div>
+                <div class="anwser" id="a2"></div>
+                <div class="anwser" id="a3">20</div>
+                <div class="anwser" id="a4">50</div>
             </div>
-            <hr>
-            <hr>
-            <div class="koloratunkowe">50/50<br>.</div>
-            <div class="koloratunkowe">Prowadzacy<br>pomoc</div>
-            <div class="koloratunkowe">Glos widowni</div>
         </div>
-        <script src="main.js"></script>
-    </body>
+    </div>
+    <div class="control_page">
+        <div class="next longButton">
+            Następne pytanie > <br>(odblokuje sie po odpowiedzi)
+        </div>
+
+        <div class="longButton" onclick="showNext()">
+            Pokaz pytanie/odpowiedzi
+        </div>
+        <div class="longButton" onclick="hideAll()">
+            Schowaj wszystkie pytania i odpowiedzi
+        </div>
+        <hr>
+        <hr>
+        <div class="koloratunkowe fifty">50/50<br>.</div>
+        <div class="koloratunkowe">Prowadzacy<br>pomoc</div>
+        <div class="koloratunkowe">Glos widowni</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
 </html>
