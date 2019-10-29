@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 body {
-    font-family: "SF Display";
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     background-color: #ff00ff;
     user-select: none;
