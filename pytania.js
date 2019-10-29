@@ -1,12 +1,12 @@
 let gameInfo = [
     {
         question: "Ile było w torbie?",
-        answers: ["Czy kilo bakłażana", "350", "Czy stufki", "Nic" ],
+        answers: ["A: Czy kilo bakłażana", "B: 350", "C: Czy stufki", "D: Nic" ],
         rightIndex: 2
     },
     {
         question: "Jak nazywa się pies patiro?",
-        answers: ["Adi", "Odi", "Olek", "Bolek"],
+        answers: ["A: Adi", "B: Odi", "C: Olek", "D: Bolek"],
         rightIndex:  1
     },
     {

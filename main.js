@@ -3,18 +3,18 @@ var czerwony = 'linear-gradient(to left, rgb(255, 72, 72), #d10000)';
 var zolty = 'linear-gradient(to left, rgba(255, 233, 32), #be9200)';
 var zielony = 'linear-gradient(to left, rgb(35, 220, 74), #008f00)';
 
-var musicCheck = 1;
+var musicCheck = 0;
 
 let musicThemes = [
-	new Audio('sound/1.mp3'),
-	new Audio('sound/2.mp3'),
-	new Audio('sound/3.mp3'),
-	new Audio('sound/4.mp3'),
-	new Audio('sound/5.mp3'),
-	new Audio('sound/6.mp3'),
-	new Audio('sound/correct answer.mp3'),
-	new Audio('sound/final answer.mp3'),
-	new Audio('sound/wrong answer.mp3'),
+	new Audio('sound/1.mp3'),//0
+	new Audio('sound/2.mp3'),//1
+	new Audio('sound/3.mp3'),//2
+	new Audio('sound/4.mp3'),//3
+	new Audio('sound/5.mp3'),//4
+	new Audio('sound/6.mp3'),//5
+	new Audio('sound/correct answer.mp3'),//6
+	new Audio('sound/final answer.mp3'),//7
+	new Audio('sound/wrong answer.mp3'),//8
 ];
 
 musicThemes.forEach((theme) => {
@@ -48,7 +48,9 @@ document.querySelectorAll('img').forEach((el, index) => {
 
 function game() {
 	allOff();
+	console.log('przed zwiekszeniem' + musicCheck);
 	musicCheck++;
+	console.log('po zwiekszeniu' + musicCheck);
 	hideAll();
 	document.getElementById('a1').style.display = 'none';
 	question = document.querySelector('.question');
@@ -83,23 +85,28 @@ async function onAnwser(index, rightIndex) {
 		el.style.pointerEvents = 'none';
 	});
 	allOff();
-	musicThemes[7].play(); //final anwser sound
-
-	for (i = 0; i < 8; i++) {
-		if (i % 2 == 1) {
-			anwsers[index].style.backgroundImage = niebieski;
-			await sleep(750);
-		} else {
-			anwsers[index].style.backgroundImage = zolty;
-			await sleep(750);
-		}
-    }
+	musicThemes[7].load();
+	musicThemes[7].play();
     anwsers[index].style.backgroundImage = zolty;
+    await sleep(750);
+    anwsers[index].style.backgroundImage = niebieski;
+    await sleep(750);
+    anwsers[index].style.backgroundImage = zolty;
+    await sleep(750);
+    anwsers[index].style.backgroundImage = niebieski;
+    await sleep(750);
+    anwsers[index].style.backgroundImage = zolty;
+    await sleep(750);
+    anwsers[index].style.backgroundImage = niebieski;
+    await sleep(750);
+    anwsers[index].style.backgroundImage = zolty;
+    await sleep(750);
+    anwsers[index].style.backgroundImage = niebieski;
     await sleep(750);
     
 	if (index == rightIndex) {
-		await sleep(750);
 		allOff();
+		musicThemes[6].load();
 		musicThemes[6].play(); // correct sound
 		anwsers[index].style.backgroundImage = zielony;
 		nextBtn.style.pointerEvents = 'auto';
@@ -136,22 +143,18 @@ function showNext() {
 			checkNext++;
 			break;
 		case 1:
-			musicTheme();
 			document.querySelector('#a1').style.display = 'block';
 			checkNext++;
 			break;
 		case 2:
-			musicTheme();
 			document.querySelector('#a2').style.display = 'block';
 			checkNext++;
 			break;
 		case 3:
-			musicTheme();
 			document.querySelector('#a3').style.display = 'block';
 			checkNext++;
 			break;
 		case 4:
-			musicTheme();
 			document.querySelector('#a4').style.display = 'block';
 			checkNext++;
 			break;
@@ -161,26 +164,34 @@ function showNext() {
 	}
 }
 function musicTheme() {
-    //Nie jestem pewien czy to działa pepega
-	musicThemes.forEach((theme, index) => {
+
+	//Nie jestem pewien czy to działa pepega 
+	//no nie działa Pepege
+	/*musicThemes.forEach((theme, index) => {
 		if (index == musicCheck + 1 || index == musicCheck) {
 			theme.play();
 		}
-	});
+	});*/
 
-	// if (musicCheck == 1 || musicCheck == 2) {
-	// 	musicTheme1.play();
-	// } else if (musicCheck == 3 || musicCheck == 4) {
-	// 	musicTheme2.play();
-	// } else if (musicCheck == 5 || musicCheck == 6) {
-	// 	musicTheme3.play();
-	// } else if (musicCheck == 7 || musicCheck == 8) {
-	// 	musicTheme4.play();
-	// } else if (musicCheck == 9 || musicCheck == 10) {
-	// 	musicTheme5.play();
-	// } else if (musicCheck == 11) {
-	// 	musicTheme6.play();
-	// }
+	if (musicCheck == 1 || musicCheck == 2) {
+		musicThemes[0].load();
+	 	musicThemes[0].play();
+	 } else if (musicCheck == 3 || musicCheck == 4) {
+		musicThemes[1].load();
+		musicThemes[1].play();
+	 } else if (musicCheck == 5 || musicCheck == 6) {
+		musicThemes[2].load();
+		musicThemes[2].play();
+	 } else if (musicCheck == 7 || musicCheck == 8) {
+		musicThemes[3].load();
+		musicThemes[3].play();
+	 } else if (musicCheck == 9 || musicCheck == 10) {
+		musicThemes[4].load();
+		musicThemes[4].play();
+	 } else if (musicCheck == 11) {
+		musicThemes[5].load();
+		musicThemes[5].play();
+	 }
 }
 function allOff() {
 	musicThemes.forEach((theme) => {
