@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="font.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
-        <meta charset="utf8">
+        <script src="pytania.js"></script>
     </head>
     <body>
-        <img id="zdjecie" src="1.png">
-        <div id="container" onclick="start()">
-            <div id="question1" style="width: 40%; cursor: pointer;" onclick>
-                <div id="question_text" onclick="test()">
-                    Rozpocznij gre! <span style="font-size: 80%;">Gracz: NZQ</span>
+        <div class="OBS_page">
+            <div class="game">
+                <div class="question">
+                    <p>Pytanie</p>
                 </div>
-            </div>
-            <div class="container_answer" id="hide">
-                <div id="win">WYGRAŁEŚ: 0zł</div>
-            </div>
-            <div class="container_answer" id="odpowiedzi" style="display: none;">
-                <div class="answer" id="a1" onclick="good('a1')">
-                    <div class="answertext"><span class="answerkey">A:</span> Czy stufki</div>
-                </div>
-                <div class="answer" id="a2" onclick="bad('a1', 'a2')">
-                    <div class="answertext"><span class="answerkey">B:</span> Czy kilo bakłażana</div>
-                </div>
-                <div class="answer" id="a3" onclick="bad('a1', 'a3')">
-                    <div class="answertext"><span class="answerkey">C:</span> 350</div>
-                </div>
-                <div class="answer" id="a4" onclick="bad('a1', 'a4')">
-                    <div class="answertext"><span class="answerkey">D:</span> nic</div>
+                <div class="anwsers">
+                    <div class="anwser" id="a1"></div>
+                    <div class="anwser" id="a2"></div>
+                    <div class="anwser" id="a3">20</div>
+                    <div class="anwser" id="a4">50</div>
                 </div>
             </div>
         </div>
-        <a href="assets/2pytanie/index.html" id="next">
-            >
-        </a>
-        <script>
-            function sleep(ms) {
-                return new Promise(resolve => setTimeout(resolve, ms));
-            }
-            
-            var letsPlay = new Audio("lets play.mp3");
+        <div class="control_page">
+            <div class="next longButton">
+                Następne pytanie >
+            </div>
 
-            letsPlay.volume = 0.1;
-
-            var kolo = 'a2';
-            async function start() {
-                letsPlay.play();
-                await sleep(3500);
-                window.location.href = "assets/1pytanie/index.html";
-            }
-        </script>
+            <div class="longButton" onclick="showNext()">
+                Pokaz pytanie/odpowiedzi
+            </div>
+            <hr>
+            <hr>
+            <div class="koloratunkowe">50/50<br>.</div>
+            <div class="koloratunkowe">Prowadzacy<br>pomoc</div>
+            <div class="koloratunkowe">Glos widowni<br>.</div>
+        </div>
         <script src="main.js"></script>
     </body>
 </html>
