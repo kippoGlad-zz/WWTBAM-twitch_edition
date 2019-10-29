@@ -43,8 +43,13 @@ document.querySelector('.fifty').addEventListener('click', () => {
 	}
 	document.querySelector('.fifty').style.pointerEvents = "none";
 });
+document.querySelector(".publicQuest").addEventListener("click", () => {
+	document.querySelector("iframe").style.display = "block";
+	document.querySelector(".publicQuest").style.pointerEvents = "none";
+})
 
 function game() {
+	document.querySelector("iframe").style.display = "none";
 	allOff();
 	console.log('przed zwiekszeniem' + musicCheck);
 	musicCheck++;
