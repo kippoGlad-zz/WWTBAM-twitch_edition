@@ -42,11 +42,21 @@ document.querySelector('.fifty').addEventListener('click', () => {
 		}
 	}
 	document.querySelector('.fifty').style.pointerEvents = "none";
+	document.querySelector('.fifty').src = "./icons/5050x.png";
+
 });
 document.querySelector(".publicQuest").addEventListener("click", () => {
 	document.querySelector("iframe").style.display = "block";
 	document.querySelector(".publicQuest").style.pointerEvents = "none";
+	document.querySelector('.publicQuest').src = "./icons/publicx.png";
+
 })
+document.querySelector(".call").addEventListener("click", () => {
+	document.querySelector(".call").style.pointerEvents = "none";
+	document.querySelector('.call').src = "./icons/callx.png";
+
+})
+
 
 function game() {
 	document.querySelector("iframe").style.display = "none";
