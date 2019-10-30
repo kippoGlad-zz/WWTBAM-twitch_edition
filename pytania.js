@@ -50,7 +50,7 @@ let gameInfo = [
         rightIndex: 0
     },
     {
-        question: "11. Jaki jest Twój najpopolarniejszy film?",
+        question: "11. Jaki jest Twój najpopularniejszy film?",
         answers: ["A: Pato Kombat", "B: Gural poniany w wizieniu", "C: Belmondo 200IQ", "D: Mahonek finał w 7 sekund"],
         rightIndex: 3
     }
