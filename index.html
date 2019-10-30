@@ -10,9 +10,9 @@
 </head>
 
 <body>
+    <div id="how_to_vote">Użyj czatu aby zagłosować! <strong>A</strong> - !vote a, <strong>B</strong> - !vote b, <strong>C</strong> - !vote c, <strong>D</strong> - !vote d</div>
     <div class="OBS_page">
         <div class="game">
-
             <div class="awards">
                 <div class="kola-ratunkowe2">
                     <img src="./icons/public.png" class="publicQuest" width="60" alt="publicznosc">
@@ -34,7 +34,7 @@
                     <div class="award"><span class="award-counter">1</span><span class="award-money">10 zł</span></div>
                 </div>
             </div>
-            <iframe width="800" height="600" src="http://167.71.39.142/"></iframe>
+            <iframe width="500" height="300" src="http://167.71.39.142/"></iframe>
 
             <div class="question">
                 <p>Pytanie</p>
@@ -48,8 +48,8 @@
         </div>
     </div>
     <div class="control_page">
-        <div class="next longButton">
-            Następne pytanie > <br>(odblokuje sie po odpowiedzi)
+        <div class="next longButton" id="chuj" style="background-color: grey;">
+            Następne pytanie > <br>(Do klikania jak dobrze odpowie)
         </div>
 
         <div class="longButton" onclick="showNext()">
@@ -60,9 +60,29 @@
         </div>
         <hr>
         <hr>
-        <div class="koloratunkowe">50/50<br>.</div>
-        <div class="koloratunkowe">Prowadzacy<br>pomoc</div>
-        <div class="koloratunkowe">Glos widowni</div>
+        <h1>KOLA RATUNKOWE</h1>
+        <div class="koloratunkowe" id="opcja5050">50/50<br>.</div>
+        <div class="koloratunkowe" id="opcjaProwadzacy">Prowadzacy<br>pomoc</div>
+        <div class="koloratunkowe" id="opcjaWidownia">Glos widowni</div>
+        <hr>
+        <hr>
+        <div class="longButton" onclick="board()">
+            Ukryj/Pokaż tabele nagród
+        </div>
+        <div class="longButton" onclick="protip()">
+            Pokaż widzom jak głosować
+        </div>
+        <hr>
+        <hr>
+        <h1>Odpowiedzi</h1>
+        <ul>
+            <li>1.A    2.A</li>
+            <li>3.A    4.A</li>
+            <li>5.A    6.A</li>
+            <li>7.A    8.A</li>
+            <li>9.A    10.A</li>
+            <li>11.A</li>
+        </ul>
     </div>
     <script src="main.js"></script>
 </body>

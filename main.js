@@ -17,6 +17,13 @@ let musicThemes = [
 	new Audio('sound/wrong answer.mp3'), //8
 ];
 
+musicThemes[1].loop = true;
+musicThemes[2].loop = true;
+musicThemes[3].loop = true;
+musicThemes[4].loop = true;
+musicThemes[5].loop = true;
+musicThemes[0].loop = true;
+
 let awardList = [...document.querySelectorAll(".award")];
 
 musicThemes.forEach((theme) => {
@@ -30,31 +37,31 @@ let nextBtn = document.querySelector('.next');
 
 
 //50:50 mechanizm
-document.querySelector('.fifty').addEventListener('click', () => {
+document.querySelector('#opcja5050').addEventListener('click', () => {
 	let counter = 0;
 	let random;
 	while (counter < 2) {
 		random = Math.floor(Math.random() * 4);
 		if (random != gameInfo[gameindex].rightIndex && gameInfo[gameindex].answers[random] != '') {
 			gameInfo[gameindex].answers[random] = '';
-			anwsers[random].innerHTML = '';
+			anwsers[random].style.display = 'none';
 			counter++;
 		}
 	}
 	document.querySelector('.fifty').style.pointerEvents = "none";
 	document.querySelector('.fifty').src = "./icons/5050x.png";
-
+	document.querySelector('#opcja5050').style.display = "none";
 });
-document.querySelector(".publicQuest").addEventListener("click", () => {
+document.querySelector("#opcjaWidownia").addEventListener("click", () => {
 	document.querySelector("iframe").style.display = "block";
 	document.querySelector(".publicQuest").style.pointerEvents = "none";
 	document.querySelector('.publicQuest').src = "./icons/publicx.png";
-
+	document.querySelector("#opcjaWidownia").style.display = "none";
 })
-document.querySelector(".call").addEventListener("click", () => {
+document.querySelector("#opcjaProwadzacy").addEventListener("click", () => {
 	document.querySelector(".call").style.pointerEvents = "none";
 	document.querySelector('.call').src = "./icons/callx.png";
-
+	document.querySelector("#opcjaProwadzacy").style.display = "none";
 })
 
 
@@ -126,6 +133,7 @@ async function onAnwser(index, rightIndex) {
 		musicThemes[6].load();
 		musicThemes[6].play(); // correct sound
 		anwsers[index].style.backgroundImage = zielony;
+		document.querySelector('#chuj').style.backgroundColor = "white";
 		nextBtn.style.pointerEvents = 'auto';
 		nextBtn.addEventListener('click', game);
 	} else {
@@ -213,4 +221,28 @@ function allOff() {
 	musicThemes.forEach((theme) => {
 		theme.pause();
 	});
+}
+
+var boardCheck = 0;
+
+function board() {
+	if (boardCheck == 0) {
+		document.querySelector('.awards').style.transform = "translateX(0px)";
+		boardCheck++;
+	} else if (boardCheck == 1) {
+		document.querySelector('.awards').style.transform = "translateX(270px)";
+		boardCheck--;
+	}
+}
+
+var protipCheck = 0;
+
+function protip() {
+	if (protipCheck == 0) {
+		document.querySelector('#how_to_vote').style.transform = "translateY(0px)";
+		protipCheck++;
+	} else if (protipCheck = 1) {
+		document.querySelector('#how_to_vote').style.transform = "translateY(35px)";
+		protipCheck--;
+	}
 }

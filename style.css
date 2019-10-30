@@ -120,7 +120,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 200px;
+    width: 190px;
     background: linear-gradient(to right, #0C55B0, #0859B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     padding: 10px 20px;
@@ -128,8 +128,10 @@ body {
     font-weight: 600;
     border-radius: 5px;
     position: absolute;
-    right: 20px;
-    top: -720px;
+    right: -165px;
+    top: -825px;
+    transition: 0.3s;
+    transform: translateX(270px);
  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .awards-container{
@@ -162,8 +164,25 @@ body {
 }
 iframe{
     position: absolute;
-    right: 400px;
-    top: -720px;
+    right: 95px;
+    top: -820px;
     border: none;
     display: none;
+    border-radius: 10px;
+}
+#how_to_vote {
+    bottom: 0;
+    position: absolute;
+    width: 1920px;
+    height: 35px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 150%;
+    transform: translateY(35px);
+    transition: 0.3s;
+}
+ul {
+    list-style-type: none;
+    font-size: 150%;
 }
