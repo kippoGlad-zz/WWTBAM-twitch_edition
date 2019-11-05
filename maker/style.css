@@ -1,0 +1,40 @@
+body {
+    margin: 0 0 0 100px;
+    font-family: "SF Display";
+}
+.question_mark {
+    display: ;
+    width: 50vw;
+    font-size: 150%;
+    margin: 25px;
+}
+input {
+    border-radius: 25px;
+}
+#confirm {
+    position: sticky;
+    top: 5vh;
+    left: 90vw;
+    background-color: rgb(38, 130, 228);
+    font-size: 150%;
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+}
+code {
+    display: block;
+    font-family: "SF Mono";
+    background-color: rgb(45, 45, 45);
+    color: white;
+    margin: 25px 100px 100px 0;
+    padding: 20px;
+    transition: 0.3s;
+}
+code:hover {
+    background-color: rgb(74, 74, 74);
+    transition: 0.3s;
+}
+::selection {
+    color: black;
+    background-color: white;
+}
