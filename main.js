@@ -68,9 +68,7 @@ document.querySelector("#opcjaProwadzacy").addEventListener("click", () => {
 function game() {
 	document.querySelector("iframe").style.display = "none";
 	allOff();
-	console.log('przed zwiekszeniem' + musicCheck);
 	musicCheck++;
-	console.log('po zwiekszeniu' + musicCheck);
 	hideAll();
 	document.getElementById('a1').style.display = 'none';
 	question = document.querySelector('.question');
@@ -143,7 +141,6 @@ async function onAnwser(index, rightIndex) {
 		anwsers[index].style.backgroundImage = czerwony;
 		await sleep(1000);
 		anwsers[rightIndex].style.backgroundImage = zielony;
-		nextBtn.innerHTML = 'PRZEGRAŁEŚ';
 	}
 }
 game();
@@ -245,4 +242,13 @@ function protip() {
 		document.querySelector('#how_to_vote').style.transform = "translateY(35px)";
 		protipCheck--;
 	}
+}
+console.log(gameindex);
+function restart() {
+	console.log(gameindex);
+	if (gameindex > 0 ) {
+		gameindex--;
+	}
+	musicCheck--;
+	game();
 }
